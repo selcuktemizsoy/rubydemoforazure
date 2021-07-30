@@ -12,7 +12,7 @@ RSpec.configure do |config|
 end
 
 Capybara.configure do |config|
-  config.app_host = "https://www.beinconnect.com.tr/hosgeldiniz"
+  config.app_host = "https://www.google.com.tr"
   config.default_selector = :css
   config.default_max_wait_time = 10
   config.default_driver = :selenium

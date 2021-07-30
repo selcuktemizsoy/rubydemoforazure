@@ -13,8 +13,4 @@ Feature: kloia.com
 
   Scenario: player test
     Given homepage is opened
-    And user clicks on the login button
-    And user login with valid credentials
-    When user navigate to "Ulusal" under "CANLI TV"
-    Then the channel list has "SHOW TV"
-    And user clicks on play button and replay the video
+
