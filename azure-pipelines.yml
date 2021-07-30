@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - task: UseRubyVersion@0
@@ -15,19 +15,12 @@ steps:
     versionSpec: '>= 3.0'
 
 - script: |
-    ls
     gem install bundler
     bundle install
   displayName: 'bundle install'
 - script: |
-    
-    cat Gemfile
     bundle install
   displayName: 'gemfile install'  
 
-- script: |
-    echo %cd%
-    ls
-  displayName: 'cd'
 - script: cucumber
   displayName: 'cucumber'
