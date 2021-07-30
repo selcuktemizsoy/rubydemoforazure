@@ -20,11 +20,19 @@ steps:
     bundle install
   displayName: 'bundle install'
 - script: |
+    
+    cat Gemfile
+    bundle install
+  displayName: 'gemfile install'  
+- script: |
     ls
     gem install capybara
+  
+  displayName: 'capybara install'
+- script: |
     ls
     gem install cucumber -v 2.4.0
-  displayName: 'cucumber and capybara install'
+  displayName: 'cucumber install'
 
 - script: |
     echo %cd%
