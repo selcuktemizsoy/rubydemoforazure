@@ -29,10 +29,6 @@ steps:
     gem install capybara
   
   displayName: 'capybara install'
-- script: |
-    ls
-    gem install cucumber -v 2.4.0
-  displayName: 'cucumber install'
 
 - script: |
     echo %cd%
