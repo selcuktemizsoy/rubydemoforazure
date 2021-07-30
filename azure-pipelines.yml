@@ -15,10 +15,12 @@ steps:
     versionSpec: '>= 3.0'
 
 - script: |
+    ls
     gem install bundler
     bundle install
   displayName: 'bundle install'
 - script: |
+    ls
     gem install cucumber -v 2.4.0
   displayName: 'bundle install'
 
