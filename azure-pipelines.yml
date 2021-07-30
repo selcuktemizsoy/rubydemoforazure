@@ -18,6 +18,9 @@ steps:
     gem install bundler
     bundle install
   displayName: 'bundle install'
+- script: |
+    bundle install
+  displayName: 'gemfile install'  
 
 - script: cucumber
   displayName: 'cucumber'
