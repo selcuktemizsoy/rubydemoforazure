@@ -18,6 +18,9 @@ steps:
     gem install bundler
     bundle install
   displayName: 'bundle install'
+- script: |
+    gem install cucumber -v 2.4.0
+  displayName: 'bundle install'
 
 - script: cucumber
   displayName: 'cucumber'
