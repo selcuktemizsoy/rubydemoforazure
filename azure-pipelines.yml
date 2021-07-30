@@ -24,11 +24,6 @@ steps:
     cat Gemfile
     bundle install
   displayName: 'gemfile install'  
-- script: |
-    ls
-    gem install capybara
-  
-  displayName: 'capybara install'
 
 - script: |
     echo %cd%
