@@ -22,7 +22,9 @@ steps:
     bundle install
   displayName: 'gemfile install'  
 
-- script: cucumber
+- script: |
+    cat cucumber.yml
+    cucumber
   displayName: 'cucumber'
 
 - task: PublishCucumberReport@1
