@@ -24,3 +24,14 @@ steps:
 
 - script: cucumber
   displayName: 'cucumber'
+
+- task: PublishCucumberReport@1
+  inputs:
+    jsonDir: '/out'
+    outputPath: '/out'
+    theme: 'bootstrap'
+    reportSuiteAsScenarios: true
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'    
