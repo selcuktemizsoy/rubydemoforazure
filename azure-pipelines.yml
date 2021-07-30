@@ -23,10 +23,12 @@ steps:
   displayName: 'gemfile install'  
 
 - script: |
+    mkdir out
+  displayName: 'mkdir'
+- script: |
     cat cucumber.yml
     cucumber
-  displayName: 'cucumber'
-
+  displayName: 'cucumber --format json --out out/cucumber.json'
 - task: PublishCucumberReport@1
   inputs:
     jsonDir: 'out/'
