@@ -16,8 +16,8 @@ steps:
 
 - script: |
     gem install bundler
-    bundle install --retry=3 --jobs=4
+    bundle install
   displayName: 'bundle install'
 
-- script: bundle exec rake
+- script: cucumber
   displayName: 'cucumber'
