@@ -22,8 +22,9 @@ steps:
 - script: |
     ls
     gem install capybara
+    ls
     gem install cucumber -v 2.4.0
-  displayName: 'bundle install'
+  displayName: 'cucumber and capybara install'
 
 - script: |
     echo %cd%
