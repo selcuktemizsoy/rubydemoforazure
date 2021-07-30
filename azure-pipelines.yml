@@ -24,6 +24,7 @@ steps:
 
 - script: |
     echo %cd%
+    ls
   displayName: 'cd'
 - script: cucumber
   displayName: 'cucumber'
