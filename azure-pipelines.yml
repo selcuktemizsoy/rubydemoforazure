@@ -22,5 +22,8 @@ steps:
     gem install cucumber -v 2.4.0
   displayName: 'bundle install'
 
+- script: |
+    echo %cd%
+  displayName: 'cd'
 - script: cucumber
   displayName: 'cucumber'
