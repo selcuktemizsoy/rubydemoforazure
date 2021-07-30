@@ -21,6 +21,7 @@ steps:
   displayName: 'bundle install'
 - script: |
     ls
+    gem install capybara
     gem install cucumber -v 2.4.0
   displayName: 'bundle install'
 
