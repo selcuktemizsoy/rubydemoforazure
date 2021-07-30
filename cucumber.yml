@@ -1,1 +1,1 @@
-cucumber -r features/ --format json --out output/out.json
+cucumber -r features/ --format json --out output/cucumber.json
