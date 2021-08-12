@@ -26,10 +26,6 @@ steps:
     script: |
       sudo dpkg -i google-chrome-stable_current_amd64.deb
          
-- task: CmdLine@2
-  inputs:
-    script: |
-      which chrome
 - script: |
     gem install bundler
   displayName: 'bundle install'
