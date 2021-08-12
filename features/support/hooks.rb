@@ -11,7 +11,7 @@ Before do |scenario|
   options.add_argument("--disable-dev-shm-usage");
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app,
-                                   browser: :chrome,
+                                   browser: :firefox,
                                    options: options)
   end
 
