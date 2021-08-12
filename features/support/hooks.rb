@@ -20,14 +20,20 @@ end
 After do |scenario|
 
   scenario_name = scenario.name.gsub(/[^A-Za-z0-9 ]/, "").gsub(/\s+/, "_")
-
   if scenario.failed?
-    puts "FAILED ==> Feature: #{scenario.feature.name} => Scenario: #{scenario_name}"
-    puts "EXCEPTION_MESSAGE ==> #{scenario.exception.message}"
+    time = Time.new
+    time_day = time.strftime("%Y-%m-%d")
+    time_hours = time.strftime("%H:%M:%S")
 
-  else
-    log("PASSED ==> Feature: #{} => Scenario: #{scenario_name}")
+    file_path = "output/screenshots-#{time_day}"
+
+    screenshot = "#{file_path}/#{scenario_name}-#{time_hours}.png"
+
+    page.save_screenshot(screenshot)
+    embed(screenshot, "image/png", "click here to view image")
+
   end
+
 
   Capybara.current_session.driver.quit
 end
