@@ -28,7 +28,11 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      sudo apt-get update -y && apt-get install-y Xvfb
+      sudo apt-get update -y && apt-get install -y Xvfb
+- task: CmdLine@2
+  inputs:
+    script: |
+      export DISPLAY=":20"
 - script: |
     gem install bundler
   displayName: 'bundle install'
