@@ -6,7 +6,8 @@ Before do |scenario|
   options.add_argument('--disable-popup-blocking')
   options.add_argument('--ignore-certificate-errors')
 =end
-
+  options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--no-sandbox')
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app,
                                    browser: :chrome,
