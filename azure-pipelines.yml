@@ -21,8 +21,11 @@ steps:
   inputs:
     script: |
       wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+- task: CmdLine@2
+  inputs:
+    script: |
       sudo dpkg -i google-chrome-stable_current_amd64.deb
-      which chrome
+         
 - task: CmdLine@2
   inputs:
     script: |
