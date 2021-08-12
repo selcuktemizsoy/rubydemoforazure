@@ -33,7 +33,7 @@ After do |scenario|
     screenshot = "#{file_path}/#{scenario_name}-#{time_hours}.png"
 
     page.save_screenshot(screenshot)
-    attach(screenshot, "image/png", "click here to view image")
+    attach(screenshot, "image/png")
 
   
 
