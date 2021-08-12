@@ -28,7 +28,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      sudo apt-get update -y && sudo apt-get install -y Xvfb
+      sudo apt-get update -y && sudo apt-get install -y xvfb
 - task: CmdLine@2
   inputs:
     script: |
