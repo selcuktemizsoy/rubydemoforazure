@@ -25,7 +25,10 @@ steps:
   inputs:
     script: |
       sudo dpkg -i google-chrome-stable_current_amd64.deb
-         
+- task: CmdLine@2
+  inputs:
+    script: |
+      apt-get update -y && apt-get install-y xvfb
 - script: |
     gem install bundler
   displayName: 'bundle install'
