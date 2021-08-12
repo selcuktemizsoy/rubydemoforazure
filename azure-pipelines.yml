@@ -34,7 +34,7 @@ steps:
   displayName: 'gemfile install'  
 
 - script: |
-    cucumber --format html --out output/index.html -f pretty
+    sudo cucumber --format html --out output/index.html -f pretty
   displayName: 'cucumber'
 - task: CopyFiles@2
   inputs:
