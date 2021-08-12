@@ -23,4 +23,4 @@ steps:
 
 - script: |
     cucumber --format html --out out/index.html
-  displayName: 'cucumber --format json --out out/cucumber.json'
+  displayName: 'cucumber'
