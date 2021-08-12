@@ -12,7 +12,7 @@ Before do |scenario|
   options.add_argument '--headless'
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app,
-                                   browser: :firefox,
+                                   browser: :chrome,
                                    options: options)
   end
 
