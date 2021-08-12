@@ -26,7 +26,7 @@ After do |scenario|
   if scenario.failed?
     time = Time.new
     time_day = time.strftime("%Y-%m-%d")
-    time_hours = time.strftime("%H:%M:%S")
+    time_hours = time.strftime("%H-%M-%S")
 
     file_path = "output/screenshots-#{time_day}"
 
