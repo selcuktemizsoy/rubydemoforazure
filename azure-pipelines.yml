@@ -17,6 +17,9 @@ steps:
   inputs:
     script: |
       which chromedriver
+- task: CmdLine@2
+  inputs:
+    script: |
       which chrome
 - script: |
     gem install bundler
