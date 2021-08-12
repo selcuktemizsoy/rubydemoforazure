@@ -25,6 +25,10 @@ steps:
   inputs:
     script: |
       sudo apt install -f
+- task: CmdLine@2
+  inputs:
+    script: |
+      which chrome
 - script: |
     gem install bundler
   displayName: 'bundle install'
