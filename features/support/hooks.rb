@@ -15,7 +15,7 @@ Before do |scenario|
                                    options: options)
   end
 
-  page.driver.browser.manage.window.maximize
+  #page.driver.browser.manage.window.maximize
   # puts 'Scenario running: ' + scenario.name
 end
 
