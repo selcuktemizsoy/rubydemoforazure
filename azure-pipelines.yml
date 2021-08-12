@@ -22,5 +22,5 @@ steps:
   displayName: 'gemfile install'  
 
 - script: |
-    cucumber --format html --out out/index.html -f pretty
+    cucumber --format html --out out/index.html
   displayName: 'cucumber --format json --out out/cucumber.json'
