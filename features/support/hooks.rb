@@ -23,7 +23,7 @@ end
 After do |scenario|
 
   scenario_name = scenario.name.gsub(/[^A-Za-z0-9 ]/, "").gsub(/\s+/, "_")
-  if scenario.failed?
+  
     time = Time.new
     time_day = time.strftime("%Y-%m-%d")
     time_hours = time.strftime("%H:%M:%S")
@@ -35,7 +35,7 @@ After do |scenario|
     page.save_screenshot(screenshot)
     embed(screenshot, "image/png", "click here to view image")
 
-  end
+  
 
   Capybara.current_session.driver.quit
 end
