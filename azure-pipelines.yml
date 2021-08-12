@@ -12,27 +12,15 @@ pool:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '>= 3.0'
+    versionSpec: '>= 2.7.2'
 
 - script: |
     gem install bundler
-    bundle install
   displayName: 'bundle install'
 - script: |
     bundle install
   displayName: 'gemfile install'  
 
 - script: |
-    cat cucumber.yml
-    cucumber
+    cucumber --format html --out out/index.html
   displayName: 'cucumber --format json --out out/cucumber.json'
-- task: PublishCucumberReport@1
-  inputs:
-    jsonDir: 'out/'
-    outputPath: 'out/'
-    theme: 'bootstrap'
-    reportSuiteAsScenarios: true
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'    
