@@ -7,7 +7,8 @@ Before do |scenario|
   options.add_argument('--ignore-certificate-errors')
 =end
   options.add_argument('--ignore-certificate-errors')
-    options.add_argument('--no-sandbox')
+  options.add_argument('--no-sandbox')
+  options.addArguments("--disable-dev-shm-usage");
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app,
                                    browser: :chrome,
@@ -34,7 +35,6 @@ After do |scenario|
     embed(screenshot, "image/png", "click here to view image")
 
   end
-
 
   Capybara.current_session.driver.quit
 end
